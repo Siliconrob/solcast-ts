@@ -1,0 +1,45 @@
+{
+  "name": "solcast",
+  "version": "0.0.1",
+  "description": "Solcast API",
+  "main": "index.js",
+  "scripts": {
+    "tsc": "tsc",
+    "tsc-watch": "tsc -w",
+    "build": "gulp build",
+    "start": "gulp build & node build/src/server.js",
+    "setup": "npm install & typings install",
+    "test": "gulp test",
+    "watch": "nodemon --watch build build/server.js"
+  },
+  "keywords": [
+    "api",
+    "solcast",
+    "forecast",
+    "radiation",
+    "power"
+  ],
+  "author": "Robin Michael <siliconrob@siliconheaven.net> (https://github.com/Siliconrob)",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/code": "^4.0.3",
+    "@types/expect": "^1.20.2",
+    "@types/lab": "^11.1.0",
+    "@types/node": "^8.0.26",
+    "gulp": "^3.9.1",
+    "gulp-env": "^0.4.0",
+    "gulp-lab": "^1.0.7",
+    "gulp-rimraf": "^0.2.1",
+    "gulp-shell": "^0.6.3",
+    "gulp-tslint": "^8.1.2",
+    "lab": "^14.2.1",
+    "lab-transform-typescript": "^3.0.1",
+    "run-sequence": "^2.1.0",
+    "tslint": "^5.7.0",
+    "typescript": "^2.4.2"
+  },
+  "dependencies": {
+    "joi": "^10.6.0",
+    "nodemon": "^1.11.0"
+  }
+}

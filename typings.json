@@ -1,0 +1,6 @@
+{
+  "globalDependencies": {
+    "code": "github:garthk/lab-transform-typescript/typings-local/code.d.ts",
+    "lab": "github:garthk/lab-transform-typescript/typings-local/lab.d.ts"
+  }
+}
