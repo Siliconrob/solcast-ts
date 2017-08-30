@@ -11,8 +11,16 @@ export const SolcastConfig : Config = {
     url: process.env.SOLCAST_API_URL || 'https://api.solcast.com.au/'
 };
 
+function validateInput(input : position.LatLng) : void {
+    const parseResult = position.validate(input);
+    if (parseResult.valid === false) {
+        throw new Error(parseResult.error);
+    }
+}
+
 export class Radiation {
     static async forecast(input : position.LatLng, apiKey? : string) : Promise<RadiationForecast> {
+        validateInput(input);
         const url = `${SolcastConfig.url}radiation/forecasts`;
         const result = await WebRequest.json<RadiationForecast>(url, {
             qs: {
@@ -25,15 +33,18 @@ export class Radiation {
         return result;
     }
     static async estimates(input : position.LatLng, apiKey? : string) : Promise<any> {
+        validateInput(input);
         throw Error('Not implemented');
     }
     static async latestEstimates(input : position.LatLng, apiKey? : string) : Promise<any> {
+        validateInput(input);
         throw Error('Not implemented');
     }
 }
 
 export class Power {
     static async forecast(input : position.LatLng, capacity? : number, apiKey? : string) : Promise<PowerForecast> {
+        validateInput(input);
         const url = `${SolcastConfig.url}pv_power/forecasts`;
         const result = await WebRequest.json<PowerForecast>(url, {
             qs: {
@@ -47,9 +58,11 @@ export class Power {
         return result;
     }
     static async estimates(input : position.LatLng, apiKey? : string) : Promise<any> {
+        validateInput(input);
         throw Error('Not implemented');
     }
     static async latestEstimates(input : position.LatLng, apiKey? : string) : Promise<any> {
+        validateInput(input);
         throw Error('Not implemented');
     }
 }

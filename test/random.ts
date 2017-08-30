@@ -5,13 +5,22 @@ function randomNumber(min: number, max: number) : number {
     throw new Error(`${min} > ${max}`);
   }
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
-  return Math.random() * (max - min) + min;
+  return Number((Math.random() * (max - min) + min).toFixed(6));
+}
+
+export function invalidPosition() : LatLng {
+  const ticks = (new Date()).getTime();
+  const result:LatLng = {
+    latitude: (ticks % 2 === 0) ? randomNumber(-110, -100) : randomNumber(100, 110),
+    longitude: (ticks % 2 === 0) ? randomNumber(-200, -190) : randomNumber(190, 200)
+  };
+  return result;  
 }
 
 export function position() : LatLng {
   const result:LatLng = {
-    latitude: randomNumber(-43.6345972634, -10.6681857235), // Australia min/max
-    longitude: randomNumber(113.338953078, 153.569469029) // Australia min/max
+    latitude: randomNumber(-43.634597, -10.668185), // Australia min/max
+    longitude: randomNumber(113.338953, 153.569469) // Australia min/max
   };
   return result;
 }
