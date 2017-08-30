@@ -1,37 +1,37 @@
 'use strict';
 
-interface API {
-    key: string;
-    url: string;
-}
+import { Config } from './types/config';
+import * as position from './types/latlng';
+import { RadiationForecast } from './types/data/radiation';
+import { PowerForecast } from './types/data/power';
 
-export const SolcastConfig : API = {
+export const SolcastConfig : Config = {
     key: process.env.SOLCAST_API_KEY || '',
-    url: process.env.SOLCAST_API || 'https://api.solcast.com.au'
+    url: process.env.SOLCAST_API_URL || 'https://api.solcast.com.au/'
 };
 
 export class Radiation {
-    static forecasts() : any {        
-        return '';
+    static async forecast(input : position.LatLng) : Promise<RadiationForecast> {
+        const result = await null;
+        return result;
     }
-    static estimatesAndActuals() : any {
-        return '';
+    static async estimates(input : position.LatLng) : Promise<any> {
+        throw Error('Not implemented');
     }
-
-    static latestEstimatesAndActuals() : any {
-        return '';
+    static async latestEstimates(input : position.LatLng) : Promise<any> {
+        throw Error('Not implemented');
     }
 }
 
 export class Power {
-    static forecasts() : any {
-        return '';
+    static async forecast(input : position.LatLng) : Promise<PowerForecast> {
+        const result = await null;
+        return result;
     }
-    static estimatesAndActuals() : any {
-        return '';
+    static async estimates(input : position.LatLng) : Promise<any> {
+        throw Error('Not implemented');
     }
-
-    static latestEstimatesAndActuals() : any {
-        return '';
+    static async latestEstimates(input : position.LatLng) : Promise<any> {
+        throw Error('Not implemented');
     }
 }
