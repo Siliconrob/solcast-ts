@@ -13,7 +13,7 @@ lab.experiment(`Power API test ${SolcastConfig.url}`, () => {
     lab.test('Forecast', (done) => {
         expect(SolcastConfig.url).not.equal('');
         const todo = new Promise(resolve => {
-            resolve(Power.forecast(random.position(), 1000));
+            resolve(Power.forecast(random.position()));
         });
         todo.then(results => {
             done();

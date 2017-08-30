@@ -40,6 +40,7 @@
   },
   "dependencies": {
     "joi": "^10.6.0",
-    "nodemon": "^1.11.0"
+    "nodemon": "^1.11.0",
+    "web-request": "^1.0.7"
   }
 }
