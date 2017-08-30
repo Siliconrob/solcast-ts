@@ -24,7 +24,7 @@ export class Radiation {
 }
 
 export class Power {
-    static async forecast(input : position.LatLng) : Promise<PowerForecast> {
+    static async forecast(input : position.LatLng, capacity: number) : Promise<PowerForecast> {
         const result = await null;
         return result;
     }
