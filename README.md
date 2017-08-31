@@ -47,7 +47,22 @@ export interface Forecast {
 }
 ```
 
-### Example
+### Examples
+
+#### NOTE: You can use standatd environment variables to hold your API key and not need to pass the optional {Radiation|Power}Options object to each function
+
+Environment variable names
+```
+SOLCAST_API_KEY
+SOLCAST_API_URL
+```
+
+Accessible through common process environment variable.
+```
+process.env.SOLCAST_API_KEY
+process.env.SOLCAST_API_URL
+```
+
 
 #### Typescript
 ``` javascript
