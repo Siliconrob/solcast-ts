@@ -12,7 +12,14 @@ export interface LatLng {
   longitude: number;
 }
 
-export function validate(input: LatLng) : ValidationResult {
+export function validateInput(point : LatLng) : void {
+  const parseResult = validate(point);
+  if (parseResult.valid === false) {
+      throw new Error(parseResult.error);
+  }
+}
+
+function validate(input: LatLng) : ValidationResult {
   const result = Joi.validate(input, schemas.query);
   let response:ValidationResult = {
     valid: false,

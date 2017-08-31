@@ -1,4 +1,4 @@
-interface Forecast {
+export interface Forecast {
     ghi: number;
     ghi90: number;
     ghi10: number;
