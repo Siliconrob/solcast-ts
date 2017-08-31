@@ -2,7 +2,7 @@
 
 TypeScript library for querying the Solcast API async/Promise based
 
-This module allows a registered users to query the Solcast API [!(https://api.solcast.com.au)](https://api.solcast.com.au).  You will need to register your user account to obtain an API key [!(https://solcast.com.au/api/register/)](https://solcast.com.au/api/register/).  Without an API key you will not be able to successfully obtain valid API results.
+This module allows a registered users to query the Solcast API [https://api.solcast.com.au](https://api.solcast.com.au).  You will need to register your user account to obtain an API key [https://solcast.com.au/api/register](https://solcast.com.au/api/register/).  Without an API key you will not be able to successfully obtain valid API results.
 
 
 ### API async/Promise based
@@ -51,7 +51,7 @@ export interface Forecast {
 
 #### Typescript
 ``` javascript
-import * as solcast from '../solcast-ts/dist/src';
+import * as solcast from 'solcast';
 
 const point = solcast.latLng(-33.865143, 151.209900); // Sydney, Australia
 
