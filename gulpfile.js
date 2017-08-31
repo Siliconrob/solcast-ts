@@ -60,7 +60,7 @@ gulp.task('configs', (cb) => {
     file: '.env.json'
   });
   return gulp.src("src/configurations/*.json")
-    .pipe(gulp.dest('./build/src/configurations'));
+    .pipe(gulp.dest('./dist/src/configurations'));
 });
 
 /**
@@ -92,7 +92,7 @@ gulp.task('test', ['build'], (cb) => {
     //,'-T node_modules/lab-transform-typescript'
   ];
 
-  gulp.src(['build/test/**/*.js'])
+  gulp.src(['dist/test/**/*.js'])
     .pipe(envs)
     .pipe(lab(labOptions))
     .once('error', (error) => {

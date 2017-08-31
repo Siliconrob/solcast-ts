@@ -4,7 +4,7 @@
     "lib": ["es5", "es6", "dom"],
     "module": "commonjs",
     "moduleResolution": "node",
-    "outDir": "build",
+    "outDir": "dist",
     "sourceMap": true,
     "declaration": true,    
     "typeRoots": [
@@ -16,6 +16,7 @@
     "test/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

@@ -16,6 +16,22 @@ export function latLng(latitude: number, longitude: number) : position.LatLng {
     return result;
 }
 
+export class Options {
+    static radiation() : parameters.RadiationOptions {
+        const result:parameters.RadiationOptions = {
+            APIKey: null
+        };
+        return result;
+    }
+    static power() : parameters.PowerOptions {
+        const result:parameters.PowerOptions = {
+            APIKey: null,
+            Capacity: null
+        };
+        return result;
+    }
+}
+
 export const SolcastConfig : Config = {
     key: process.env.SOLCAST_API_KEY || '',
     url: process.env.SOLCAST_API_URL || 'https://api.solcast.com.au/'
@@ -50,7 +66,7 @@ export class Radiation {
     //     });
     //     return result;
     // }
-    // static async latestEstimates(input : position.LatLng, options? : parameters.RadiationOptions) : Promise<any> {
+    // static async latestEstimates(input : position.LatLng, options? : RadiationOptions) : Promise<any> {
     //     position.validateInput(input);
     //     const url = buildUrl(SolcastConfig.url, 'radiation/estimated_actuals/latest');
     //     const result = await WebRequest.json<any>(url, {
@@ -71,7 +87,7 @@ export class Power {
         });
         return result;
     }
-    // static async estimates(point : position.LatLng, options? : parameters.PowerOptions) : Promise<any> {
+    // static async estimates(point : position.LatLng, options? : PowerOptions) : Promise<any> {
     //     position.validateInput(point);
     //     const url = buildUrl(SolcastConfig.url, 'pv_power/estimated_actuals');
     //     const result = await WebRequest.json<any>(url, {
@@ -80,7 +96,7 @@ export class Power {
     //     });
     //     return result;
     // }
-    // static async latestEstimates(point : position.LatLng, options? : parameters.PowerOptions) : Promise<any> {
+    // static async latestEstimates(point : position.LatLng, options? : PowerOptions) : Promise<any> {
     //     position.validateInput(point);
     //     const url = buildUrl(SolcastConfig.url, 'pv_power/estimated_actuals/latest');
     //     const result = await WebRequest.json<any>(url, {

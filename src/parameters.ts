@@ -1,8 +1,12 @@
 import * as position from './types/latlng';
-import { Options } from './types/options';
 import { Config } from './types/config';
+import { Options } from './types/options';
 
 export interface RadiationOptions extends Options {
+}
+
+export interface PowerOptions extends Options {
+    Capacity: number;
 }
 
 export function radiation(point : position.LatLng, solcastConfig: Config, options? : RadiationOptions) : object {
@@ -15,10 +19,6 @@ export function radiation(point : position.LatLng, solcastConfig: Config, option
         latitude: point.latitude !== null ? point.latitude : 0,
         longitude: point.longitude !== null ? point.longitude : 0
     };
-}
-
-export interface PowerOptions extends Options {
-    Capacity: number;
 }
 
 export function power(point : position.LatLng, solcastConfig: Config, options? : PowerOptions) : object {
