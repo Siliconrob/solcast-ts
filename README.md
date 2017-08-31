@@ -49,7 +49,8 @@ export interface Forecast {
 
 ### Examples
 
-#### NOTE: You can use standatd environment variables to hold your API key and not need to pass the optional {Radiation|Power}Options object to each function
+#### NOTE: 
+You can use standatd environment variables to hold your API key and not need to pass the optional {Radiation|Power}Options object to each function
 
 Environment variable names
 ```
