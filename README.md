@@ -137,3 +137,7 @@ results.then(results => {
    ]
 }
 ```
+
+### Development note
+1. Copy `.env.json.sample` to `.env.json` 
+2. Set `SOLCAST_API_KEY` on json file after register from <https://solcast.com.au/api/register/>

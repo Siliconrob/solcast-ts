@@ -1,12 +1,13 @@
 'use strict';
 
-const gulp = require('gulp');
+const gulp   = require('gulp');
 const rimraf = require('gulp-rimraf');
 const tslint = require('gulp-tslint');
-const lab = require('gulp-lab');
-const shell = require('gulp-shell');
-const env = require('gulp-env');
+const lab    = require('gulp-lab');
+const shell  = require('gulp-shell');
+const env    = require('gulp-env');
 const runSequence = require('run-sequence');
+const fs     = require('fs');
 
 /**
  * Remove build directory.
@@ -56,9 +57,19 @@ gulp.task('watch', shell.task([
  * Copy config files
  */
 gulp.task('configs', (cb) => {
-  env({
-    file: '.env.json'
-  });
+  const envFile = '.env.json';
+  if(fs.existsSync(envFile)) {
+    env({
+      file: envFile
+    });
+  }
+
+  if(process.env.SOLCAST_API_KEY) {
+    env.set({
+      SOLCAST_API_KEY: process.env.SOLCAST_API_KEY
+    });
+  }
+
   return gulp.src("src/configurations/*.json")
     .pipe(gulp.dest('./dist/src/configurations'));
 });
@@ -83,14 +94,12 @@ gulp.task('test', ['build'], (cb) => {
     NODE_ENV: 'test'
   });
 
-  const labOptions = [
-    '-S',
-    '-v',
-    '-l',
-    '-D',
-    '-R'
-    //,'-T node_modules/lab-transform-typescript'
-  ];
+  const labOptions = {
+    args: '-D -R -S -l -v',
+    opts: {
+      emitLabError: true
+    }
+  };
 
   gulp.src(['dist/test/**/*.js'])
     .pipe(envs)
