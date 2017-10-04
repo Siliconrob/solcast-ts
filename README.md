@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Siliconrob/solcast-ts.svg?branch=master)](https://travis-ci.org/Siliconrob/solcast-ts)
+
 ## Solcast TypeScript API Client library
 
 TypeScript library for querying the Solcast API async/Promise based
