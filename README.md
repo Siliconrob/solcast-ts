@@ -1,5 +1,4 @@
 [![Build Status](https://travis-ci.org/Siliconrob/solcast-ts.svg?branch=master)](https://travis-ci.org/Siliconrob/solcast-ts)
-[![codecov](https://codecov.io/gh/Siliconrob/solcast-ts/branch/master/graph/badge.svg)](https://codecov.io/gh/Siliconrob/solcast-ts)
 [![NPM:](https://img.shields.io/npm/v/node-npm-template.svg)](https://www.npmjs.com/package/solcast)
 
 
