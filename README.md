@@ -1,6 +1,8 @@
 [![Build Status](https://travis-ci.org/Siliconrob/solcast-ts.svg?branch=master)](https://travis-ci.org/Siliconrob/solcast-ts)
 [![NPM:](https://img.shields.io/npm/v/node-npm-template.svg)](https://www.npmjs.com/package/solcast)
 
+# Live Glitch [Demo](https://solcast-demo.glitch.me/)
+
 
 ## Solcast TypeScript API Client library
 
