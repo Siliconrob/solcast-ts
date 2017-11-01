@@ -1,6 +1,6 @@
 {
   "name": "solcast",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Solcast API Client library",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
