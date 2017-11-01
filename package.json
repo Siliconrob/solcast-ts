@@ -30,7 +30,7 @@
     "@types/code": "^4.0.3",
     "@types/expect": "^1.20.2",
     "@types/lab": "^11.1.0",
-    "@types/node": "^8.0.46",
+    "@types/node": "^8.0.47",
     "gulp": "^3.9.1",
     "gulp-env": "^0.4.0",
     "gulp-lab": "^1.0.7",
@@ -40,8 +40,8 @@
     "lab": "^14.3.1",
     "lab-transform-typescript": "^3.0.1",
     "run-sequence": "^2.2.0",
-    "tslint": "^5.7.0",
-    "typescript": "^2.5.3"
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
   },
   "dependencies": {
     "joi": "^10.6.0",

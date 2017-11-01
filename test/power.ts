@@ -4,6 +4,7 @@ import * as Lab from 'lab';
 import * as Code from 'code';
 import { Power, SolcastConfig } from '../src/index';
 import * as random from './random';
+import * as constants from './constants';
 
 const lab = exports.lab = Lab.script();
 const { describe, it, before } = lab;
@@ -14,32 +15,11 @@ const latLngPoint = random.position();
 lab.experiment(`Power API test ${SolcastConfig.url}`, () => {
     lab.test('Forecast', (done) => {
         expect(SolcastConfig.url).not.equal('');
-        const todo = new Promise(resolve => {
-            console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);            
-            resolve(Power.forecast(random.position()));
-        });
+        console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);        
+        const todo = Power.forecast(random.position());
         todo.then(results => {
+            expect(constants.Forecasts.total).equal(results.forecasts.length);
             done();
         });
-    });
-    // lab.test('Estimates and Actual', (done) => {
-    //     expect(SolcastConfig.url).not.equal('');
-    //     const todo = new Promise(resolve => {
-    //         console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);            
-    //         resolve(Power.estimates(random.position()));
-    //     });
-    //     todo.then(results => {
-    //         done();
-    //     });
-    // });
-    // lab.test('Latest Estimates and Actual', (done) => {
-    //     expect(SolcastConfig.url).not.equal('');
-    //     const todo = new Promise(resolve => {
-    //         console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);            
-    //         resolve(Power.latestEstimates(random.position()));
-    //     });
-    //     todo.then(results => {
-    //         done();
-    //     });
-    // });       
+    });      
 });
