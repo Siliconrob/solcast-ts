@@ -1,10 +1,8 @@
 [![Build Status](https://travis-ci.org/Siliconrob/solcast-ts.svg?branch=master)](https://travis-ci.org/Siliconrob/solcast-ts)
 [![NPM:](https://img.shields.io/npm/v/node-npm-template.svg)](https://www.npmjs.com/package/solcast)
-
-# Live Glitch :sun_with_face:[Demo](https://solcast-demo.glitch.me/):sun_with_face:
-
 [![Join the chat at https://gitter.im/solcast-ts/Lobby](https://badges.gitter.im/solcast-ts/Lobby.svg)](https://gitter.im/solcast-ts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
+# Live Glitch :sun_with_face:[Demo](https://solcast-demo.glitch.me/):sun_with_face:
 
 ## Solcast TypeScript API Client library
 
