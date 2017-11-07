@@ -3,6 +3,8 @@
 
 # Live Glitch :sun_with_face:[Demo](https://solcast-demo.glitch.me/):sun_with_face:
 
+[![Join the chat at https://gitter.im/solcast-ts/Lobby](https://badges.gitter.im/solcast-ts/Lobby.svg)](https://gitter.im/solcast-ts/Lobby?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 
 ## Solcast TypeScript API Client library
 
