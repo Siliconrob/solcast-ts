@@ -30,22 +30,22 @@
     "@types/code": "^4.0.3",
     "@types/expect": "^1.20.2",
     "@types/lab": "^11.1.0",
-    "@types/node": "^8.0.47",
+    "@types/node": "^8.5.2",
     "gulp": "^3.9.1",
     "gulp-env": "^0.4.0",
     "gulp-lab": "^1.0.7",
     "gulp-rimraf": "^0.2.1",
     "gulp-shell": "^0.6.3",
     "gulp-tslint": "^8.1.2",
-    "lab": "^14.3.1",
+    "lab": "^14.3.2",
     "lab-transform-typescript": "^3.0.1",
     "run-sequence": "^2.2.0",
     "tslint": "^5.8.0",
-    "typescript": "^2.6.1"
+    "typescript": "^2.6.2"
   },
   "dependencies": {
     "joi": "^10.6.0",
-    "nodemon": "^1.12.1",
+    "nodemon": "^1.14.3",
     "web-request": "^1.0.7"
   }
 }
