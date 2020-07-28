@@ -14,7 +14,7 @@ export function invalidPosition() : LatLng {
     latitude: (ticks % 2 === 0) ? randomNumber(-110, -100) : randomNumber(100, 110),
     longitude: (ticks % 2 === 0) ? randomNumber(-200, -190) : randomNumber(190, 200)
   };
-  return result;  
+  return result;
 }
 
 export function position() : LatLng {

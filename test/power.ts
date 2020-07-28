@@ -15,11 +15,11 @@ const latLngPoint = random.position();
 lab.experiment(`Power API test ${SolcastConfig.url}`, () => {
     lab.test('Forecast', (done) => {
         expect(SolcastConfig.url).not.equal('');
-        console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);        
+        console.log(`Latitude: ${latLngPoint.latitude} Longitude: ${latLngPoint.longitude}`);
         const todo = Power.forecast(random.position());
         todo.then(results => {
             expect(constants.Forecasts.total).equal(results.forecasts.length);
             done();
         });
-    });      
+    });
 });
