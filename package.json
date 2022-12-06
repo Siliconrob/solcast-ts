@@ -31,7 +31,7 @@
     "@types/expect": "^1.20.2",
     "@types/lab": "^11.1.0",
     "@types/node": "^8.5.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-env": "^0.4.0",
     "gulp-lab": "^1.0.7",
     "gulp-rimraf": "^0.2.1",
